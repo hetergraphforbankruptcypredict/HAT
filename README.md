@@ -9,14 +9,6 @@ This source code is developed based on the implementation of HAN using DGL, whic
 
 Simply `%run main.py` for reproducing our work on our dataset.
 
-If you want to regenerate top-k type-specific neighbors and the test set and validation set. Please run the following code in order:
-
-
-%run random_walk_withrestart.py  
-%run c_ineigh_feature_generation.py  
-%run test_data_generation.py  
-%run main.py
-
 ## About the dataset
 
 To evaluate our proposed model in bankruptcy prediction, we collect and build a real-world dataset, which contains the board member network and the shareholder network for 13489 companies in China, from multiple public sources such as the National Enterprise Credit Information Publicity System (gsxt.gdgs.gov.cn) and China Judgment Online (zxgk.court.gov.cn). Specifically, we randomly selected 1000 companies, which located in a south-eastern city in China and went bankrupt in 2018. Then, we extend the network by collecting all the shareholders and board members for these firms and repeat this process for the collected nodes twice. Finally, the original 1000 nodes network has been extended to a much larger network with 13489 nodes.
